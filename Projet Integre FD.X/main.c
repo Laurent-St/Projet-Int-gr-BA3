@@ -56,10 +56,19 @@ int i;
 int main(int argc, char** argv) {
     init();
     init_PWM();
-    T2CONbits.TON = 1; //demarrage timer
+    init_QEI();
+    T2CONbits.TON = 1; //démarrage timer
     T3CONbits.TON = 1;
+    //int varTest = 1;
     while(1){
-        //permet au programme de rester dans cette boucle sans rénéitialiser le timer
+        //permet au programme de rester dans cette boucle sans réinitialiser le timerµ
+        
+        if (POS1CNT >= 90){
+            //varTest = 0;
+            POS1CNT = 0;
+            OC1RS = 7500;
+            OC3RS = 7500;
+        }
     }
     return 0;
 }

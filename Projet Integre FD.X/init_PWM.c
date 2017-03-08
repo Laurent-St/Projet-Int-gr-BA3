@@ -12,8 +12,8 @@ void init_PWM(void){
     //initialisation du PWM
     OC1CONbits.OCM=0b110; //on active le PWM
     OC1CONbits.OCTSEL=0; //correspond au timer2
-    OC1R=5000;  //cf. page 30 où rapport cyclique delta=OC1R/(PR2+1) et ici on veut delta=20%
-    OC1RS=5000;
+    OC1R=7000;  //cf. page 30 où rapport cyclique delta=OC1R/(PR2+1) et ici on veut delta=0.28%
+    OC1RS=7000;
     
     //lien entre le Output-Compare et le pin
     AD1PCFGL = 0x01FF; //met tous les pins en digital pour que la 2e roue tourne
@@ -31,8 +31,8 @@ void init_PWM(void){
     //initialisation du PWM
     OC3CONbits.OCM=0b110; //on active le PWM
     OC3CONbits.OCTSEL=0; //correspond au timer2
-    OC3R=10000;  //cf. page 30 où rapport cyclique delta=OC1R/(PR2+1) et ici on veut delta=40%
-    OC3RS=10000;
+    OC3R=8000;  //cf. page 30 où rapport cyclique delta=OC3R/(PR3+1) et ici on veut delta=0.32%
+    OC3RS=8000;
     
 //    RPOR9bits.RP18R = 0b10010;
 //    RPOR6bits.RP12R = 0b10011;

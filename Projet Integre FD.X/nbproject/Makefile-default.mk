@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c init_uart.c init_timer.c init_ADC.c init.c init_PWM.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c init_uart.c init_timer.c init_ADC.c init.c init_PWM.c init_QEI.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/init_uart.o ${OBJECTDIR}/init_timer.o ${OBJECTDIR}/init_ADC.o ${OBJECTDIR}/init.o ${OBJECTDIR}/init_PWM.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/init_uart.o.d ${OBJECTDIR}/init_timer.o.d ${OBJECTDIR}/init_ADC.o.d ${OBJECTDIR}/init.o.d ${OBJECTDIR}/init_PWM.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/init_uart.o ${OBJECTDIR}/init_timer.o ${OBJECTDIR}/init_ADC.o ${OBJECTDIR}/init.o ${OBJECTDIR}/init_PWM.o ${OBJECTDIR}/init_QEI.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/init_uart.o.d ${OBJECTDIR}/init_timer.o.d ${OBJECTDIR}/init_ADC.o.d ${OBJECTDIR}/init.o.d ${OBJECTDIR}/init_PWM.o.d ${OBJECTDIR}/init_QEI.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/init_uart.o ${OBJECTDIR}/init_timer.o ${OBJECTDIR}/init_ADC.o ${OBJECTDIR}/init.o ${OBJECTDIR}/init_PWM.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/init_uart.o ${OBJECTDIR}/init_timer.o ${OBJECTDIR}/init_ADC.o ${OBJECTDIR}/init.o ${OBJECTDIR}/init_PWM.o ${OBJECTDIR}/init_QEI.o
 
 # Source Files
-SOURCEFILES=main.c init_uart.c init_timer.c init_ADC.c init.c init_PWM.c
+SOURCEFILES=main.c init_uart.c init_timer.c init_ADC.c init.c init_PWM.c init_QEI.c
 
 
 CFLAGS=
@@ -130,6 +130,13 @@ ${OBJECTDIR}/init_PWM.o: init_PWM.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  init_PWM.c  -o ${OBJECTDIR}/init_PWM.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/init_PWM.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/init_PWM.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/init_QEI.o: init_QEI.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/init_QEI.o.d 
+	@${RM} ${OBJECTDIR}/init_QEI.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  init_QEI.c  -o ${OBJECTDIR}/init_QEI.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/init_QEI.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/init_QEI.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -172,6 +179,13 @@ ${OBJECTDIR}/init_PWM.o: init_PWM.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/init_PWM.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  init_PWM.c  -o ${OBJECTDIR}/init_PWM.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/init_PWM.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/init_PWM.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/init_QEI.o: init_QEI.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/init_QEI.o.d 
+	@${RM} ${OBJECTDIR}/init_QEI.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  init_QEI.c  -o ${OBJECTDIR}/init_QEI.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/init_QEI.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/init_QEI.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

@@ -26,6 +26,8 @@
       <itemPath>init.c</itemPath>
       <itemPath>init_PWM.c</itemPath>
       <itemPath>init_PWM.h</itemPath>
+      <itemPath>init_QEI.c</itemPath>
+      <itemPath>init_QEI.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
