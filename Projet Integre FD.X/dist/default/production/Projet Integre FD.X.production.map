@@ -64,10 +64,10 @@ Program Memory  [Origin = 0x200, Length = 0x15600]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200                0xce           0x135  (309)
-.text                        0x2ce               0x188           0x24c  (588)
-.dinit                       0x456                 0x8             0xc  (12)
+.text                        0x2ce               0x172           0x22b  (555)
+.dinit                       0x440                 0x8             0xc  (12)
 
-                 Total program memory used (bytes):          0x38d  (909) <1%
+                 Total program memory used (bytes):          0x36c  (876) <1%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
@@ -107,14 +107,14 @@ External Symbols in Program Memory (by address):
                   0x0002ce                  _init_PWM
                   0x00034a                  _init_QEI
                   0x0003a8                  _init
-                  0x0003ec                  _main
-                  0x000414                  _Init_ADC
-                  0x000438                  _init_uart
-                  0x00044a                  _init_timer
+                  0x0003ec                  _Init_ADC
+                  0x000410                  _main
+                  0x000422                  _init_uart
+                  0x000434                  _init_timer
 
 External Symbols in Program Memory (by name):
 
-                  0x000414                  _Init_ADC
+                  0x0003ec                  _Init_ADC
                   0x0002c8                  __DefaultInterrupt
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
@@ -123,9 +123,9 @@ External Symbols in Program Memory (by name):
                   0x0003a8                  _init
                   0x0002ce                  _init_PWM
                   0x00034a                  _init_QEI
-                  0x00044a                  _init_timer
-                  0x000438                  _init_uart
-                  0x0003ec                  _main
+                  0x000434                  _init_timer
+                  0x000422                  _init_uart
+                  0x000410                  _main
 
 Memory Configuration
 
@@ -259,36 +259,36 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x2852
+.debug_info       0x000000       0x27e9
  *(.debug_info)
- .debug_info      0x000000        0x417 build/default/production/main.o
- .debug_info      0x000417        0x492 build/default/production/init_uart.o
- .debug_info      0x0008a9        0x1f2 build/default/production/init_timer.o
- .debug_info      0x000a9b        0x5ed build/default/production/init_ADC.o
- .debug_info      0x001088        0x4e1 build/default/production/init.o
- .debug_info      0x001569        0x926 build/default/production/init_PWM.o
- .debug_info      0x001e8f        0x9c3 build/default/production/init_QEI.o
+ .debug_info      0x000000        0x3ae build/default/production/main.o
+ .debug_info      0x0003ae        0x492 build/default/production/init_uart.o
+ .debug_info      0x000840        0x1f2 build/default/production/init_timer.o
+ .debug_info      0x000a32        0x5ed build/default/production/init_ADC.o
+ .debug_info      0x00101f        0x4e1 build/default/production/init.o
+ .debug_info      0x001500        0x926 build/default/production/init_PWM.o
+ .debug_info      0x001e26        0x9c3 build/default/production/init_QEI.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x54f
+.debug_abbrev     0x000000        0x53e
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xfb build/default/production/main.o
- .debug_abbrev    0x0000fb         0xb8 build/default/production/init_uart.o
- .debug_abbrev    0x0001b3         0xb8 build/default/production/init_timer.o
- .debug_abbrev    0x00026b         0xa7 build/default/production/init_ADC.o
- .debug_abbrev    0x000312         0xc9 build/default/production/init.o
- .debug_abbrev    0x0003db         0xb8 build/default/production/init_PWM.o
- .debug_abbrev    0x000493         0xbc build/default/production/init_QEI.o
+ .debug_abbrev    0x000000         0xea build/default/production/main.o
+ .debug_abbrev    0x0000ea         0xb8 build/default/production/init_uart.o
+ .debug_abbrev    0x0001a2         0xb8 build/default/production/init_timer.o
+ .debug_abbrev    0x00025a         0xa7 build/default/production/init_ADC.o
+ .debug_abbrev    0x000301         0xc9 build/default/production/init.o
+ .debug_abbrev    0x0003ca         0xb8 build/default/production/init_PWM.o
+ .debug_abbrev    0x000482         0xbc build/default/production/init_QEI.o
 
-.debug_line       0x000000        0x459
+.debug_line       0x000000        0x452
  *(.debug_line)
- .debug_line      0x000000         0xa2 build/default/production/main.o
- .debug_line      0x0000a2         0x9c build/default/production/init_uart.o
- .debug_line      0x00013e         0x9a build/default/production/init_timer.o
- .debug_line      0x0001d8         0x9d build/default/production/init_ADC.o
- .debug_line      0x000275         0x9a build/default/production/init.o
- .debug_line      0x00030f         0xaa build/default/production/init_PWM.o
- .debug_line      0x0003b9         0xa0 build/default/production/init_QEI.o
+ .debug_line      0x000000         0x9b build/default/production/main.o
+ .debug_line      0x00009b         0x9c build/default/production/init_uart.o
+ .debug_line      0x000137         0x9a build/default/production/init_timer.o
+ .debug_line      0x0001d1         0x9d build/default/production/init_ADC.o
+ .debug_line      0x00026e         0x9a build/default/production/init.o
+ .debug_line      0x000308         0xaa build/default/production/init_PWM.o
+ .debug_line      0x0003b2         0xa0 build/default/production/init_QEI.o
 
 .debug_frame      0x000000        0x150
  *(.debug_frame)
@@ -1511,21 +1511,21 @@ __c30_signature
  .nbss              0x0800          0x2 build/default/production/main.o
                     0x0800                  _i
 
-.text             0x0002ce        0x188
+.text             0x0002ce        0x172
  .text            0x0002ce         0x7c build/default/production/init_PWM.o
                   0x0002ce                  _init_PWM
  .text            0x00034a         0x5e build/default/production/init_QEI.o
                   0x00034a                  _init_QEI
  .text            0x0003a8         0x44 build/default/production/init.o
                   0x0003a8                  _init
- .text            0x0003ec         0x28 build/default/production/main.o
-                  0x0003ec                  _main
- .text            0x000414         0x24 build/default/production/init_ADC.o
-                  0x000414                  _Init_ADC
- .text            0x000438         0x12 build/default/production/init_uart.o
-                  0x000438                  _init_uart
- .text            0x00044a          0xc build/default/production/init_timer.o
-                  0x00044a                  _init_timer
+ .text            0x0003ec         0x24 build/default/production/init_ADC.o
+                  0x0003ec                  _Init_ADC
+ .text            0x000410         0x12 build/default/production/main.o
+                  0x000410                  _main
+ .text            0x000422         0x12 build/default/production/init_uart.o
+                  0x000422                  _init_uart
+ .text            0x000434          0xc build/default/production/init_timer.o
+                  0x000434                  _init_timer
 
-.dinit            0x000456          0x8
- .dinit           0x000456          0x8 data_init
+.dinit            0x000440          0x8
+ .dinit           0x000440          0x8 data_init

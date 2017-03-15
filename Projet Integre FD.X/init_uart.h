@@ -12,10 +12,9 @@
 extern "C" {
 #endif
 
-void init_uart(void);
+void init_uart(int num_timer);
 
-    //int FCY;
-    //int baudR;
+    
 
 
 #ifdef	__cplusplus

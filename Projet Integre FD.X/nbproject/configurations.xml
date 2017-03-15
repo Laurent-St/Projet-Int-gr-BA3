@@ -16,18 +16,21 @@
       </logicalFolder>
       <logicalFolder name="f2" displayName="PWM" projectFiles="true">
       </logicalFolder>
-      <itemPath>init_uart.h</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>init_uart.c</itemPath>
       <itemPath>init_timer.c</itemPath>
-      <itemPath>init_ADC.h</itemPath>
       <itemPath>init_ADC.c</itemPath>
       <itemPath>init.h</itemPath>
       <itemPath>init.c</itemPath>
       <itemPath>init_PWM.c</itemPath>
-      <itemPath>init_PWM.h</itemPath>
       <itemPath>init_QEI.c</itemPath>
-      <itemPath>init_QEI.h</itemPath>
+      <itemPath>position_demarrage.c</itemPath>
+      <itemPath>position_croisière.c</itemPath>
+      <itemPath>conversion_capteur_pos.c</itemPath>
+      <itemPath>motor_on.c</itemPath>
+      <itemPath>motor_off.c</itemPath>
+      <itemPath>regulation.c</itemPath>
+      <itemPath>deplacement.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -209,6 +212,7 @@
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c init_uart.c init_timer.c init_ADC.c init.c init_PWM.c init_QEI.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c init_uart.c init_timer.c init_ADC.c init.c init_PWM.c init_QEI.c position_demarrage.c position_croisière.c conversion_capteur_pos.c motor_on.c motor_off.c regulation.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/init_uart.o ${OBJECTDIR}/init_timer.o ${OBJECTDIR}/init_ADC.o ${OBJECTDIR}/init.o ${OBJECTDIR}/init_PWM.o ${OBJECTDIR}/init_QEI.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/init_uart.o.d ${OBJECTDIR}/init_timer.o.d ${OBJECTDIR}/init_ADC.o.d ${OBJECTDIR}/init.o.d ${OBJECTDIR}/init_PWM.o.d ${OBJECTDIR}/init_QEI.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/init_uart.o ${OBJECTDIR}/init_timer.o ${OBJECTDIR}/init_ADC.o ${OBJECTDIR}/init.o ${OBJECTDIR}/init_PWM.o ${OBJECTDIR}/init_QEI.o ${OBJECTDIR}/position_demarrage.o ${OBJECTDIR}/position_croisière.o ${OBJECTDIR}/conversion_capteur_pos.o ${OBJECTDIR}/motor_on.o ${OBJECTDIR}/motor_off.o ${OBJECTDIR}/regulation.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/init_uart.o.d ${OBJECTDIR}/init_timer.o.d ${OBJECTDIR}/init_ADC.o.d ${OBJECTDIR}/init.o.d ${OBJECTDIR}/init_PWM.o.d ${OBJECTDIR}/init_QEI.o.d ${OBJECTDIR}/position_demarrage.o.d ${OBJECTDIR}/position_croisière.o.d ${OBJECTDIR}/conversion_capteur_pos.o.d ${OBJECTDIR}/motor_on.o.d ${OBJECTDIR}/motor_off.o.d ${OBJECTDIR}/regulation.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/init_uart.o ${OBJECTDIR}/init_timer.o ${OBJECTDIR}/init_ADC.o ${OBJECTDIR}/init.o ${OBJECTDIR}/init_PWM.o ${OBJECTDIR}/init_QEI.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/init_uart.o ${OBJECTDIR}/init_timer.o ${OBJECTDIR}/init_ADC.o ${OBJECTDIR}/init.o ${OBJECTDIR}/init_PWM.o ${OBJECTDIR}/init_QEI.o ${OBJECTDIR}/position_demarrage.o ${OBJECTDIR}/position_croisière.o ${OBJECTDIR}/conversion_capteur_pos.o ${OBJECTDIR}/motor_on.o ${OBJECTDIR}/motor_off.o ${OBJECTDIR}/regulation.o
 
 # Source Files
-SOURCEFILES=main.c init_uart.c init_timer.c init_ADC.c init.c init_PWM.c init_QEI.c
+SOURCEFILES=main.c init_uart.c init_timer.c init_ADC.c init.c init_PWM.c init_QEI.c position_demarrage.c position_croisière.c conversion_capteur_pos.c motor_on.c motor_off.c regulation.c
 
 
 CFLAGS=
@@ -137,6 +137,48 @@ ${OBJECTDIR}/init_QEI.o: init_QEI.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  init_QEI.c  -o ${OBJECTDIR}/init_QEI.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/init_QEI.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/init_QEI.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/position_demarrage.o: position_demarrage.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/position_demarrage.o.d 
+	@${RM} ${OBJECTDIR}/position_demarrage.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  position_demarrage.c  -o ${OBJECTDIR}/position_demarrage.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/position_demarrage.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/position_demarrage.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/position_croisière.o: position_croisière.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/position_croisière.o.d 
+	@${RM} ${OBJECTDIR}/position_croisière.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  position_croisière.c  -o ${OBJECTDIR}/position_croisière.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/position_croisière.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/position_croisière.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/conversion_capteur_pos.o: conversion_capteur_pos.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/conversion_capteur_pos.o.d 
+	@${RM} ${OBJECTDIR}/conversion_capteur_pos.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  conversion_capteur_pos.c  -o ${OBJECTDIR}/conversion_capteur_pos.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/conversion_capteur_pos.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/conversion_capteur_pos.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/motor_on.o: motor_on.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/motor_on.o.d 
+	@${RM} ${OBJECTDIR}/motor_on.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  motor_on.c  -o ${OBJECTDIR}/motor_on.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/motor_on.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/motor_on.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/motor_off.o: motor_off.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/motor_off.o.d 
+	@${RM} ${OBJECTDIR}/motor_off.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  motor_off.c  -o ${OBJECTDIR}/motor_off.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/motor_off.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/motor_off.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/regulation.o: regulation.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/regulation.o.d 
+	@${RM} ${OBJECTDIR}/regulation.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  regulation.c  -o ${OBJECTDIR}/regulation.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/regulation.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/regulation.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -186,6 +228,48 @@ ${OBJECTDIR}/init_QEI.o: init_QEI.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/init_QEI.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  init_QEI.c  -o ${OBJECTDIR}/init_QEI.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/init_QEI.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/init_QEI.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/position_demarrage.o: position_demarrage.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/position_demarrage.o.d 
+	@${RM} ${OBJECTDIR}/position_demarrage.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  position_demarrage.c  -o ${OBJECTDIR}/position_demarrage.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/position_demarrage.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/position_demarrage.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/position_croisière.o: position_croisière.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/position_croisière.o.d 
+	@${RM} ${OBJECTDIR}/position_croisière.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  position_croisière.c  -o ${OBJECTDIR}/position_croisière.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/position_croisière.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/position_croisière.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/conversion_capteur_pos.o: conversion_capteur_pos.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/conversion_capteur_pos.o.d 
+	@${RM} ${OBJECTDIR}/conversion_capteur_pos.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  conversion_capteur_pos.c  -o ${OBJECTDIR}/conversion_capteur_pos.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/conversion_capteur_pos.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/conversion_capteur_pos.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/motor_on.o: motor_on.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/motor_on.o.d 
+	@${RM} ${OBJECTDIR}/motor_on.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  motor_on.c  -o ${OBJECTDIR}/motor_on.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/motor_on.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/motor_on.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/motor_off.o: motor_off.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/motor_off.o.d 
+	@${RM} ${OBJECTDIR}/motor_off.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  motor_off.c  -o ${OBJECTDIR}/motor_off.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/motor_off.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/motor_off.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/regulation.o: regulation.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/regulation.o.d 
+	@${RM} ${OBJECTDIR}/regulation.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  regulation.c  -o ${OBJECTDIR}/regulation.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/regulation.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/regulation.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

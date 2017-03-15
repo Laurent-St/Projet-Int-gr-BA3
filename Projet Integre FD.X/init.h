@@ -13,6 +13,12 @@ extern "C" {
 #endif
 
 void init(void);
+void Init_ADC(void);
+void init_PWM(void);
+void init_QEI(void);
+void init_timer(int num_timer);
+void init_uart(void);
+
 
 
 #ifdef	__cplusplus

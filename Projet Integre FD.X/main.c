@@ -7,9 +7,8 @@
 #include <xc.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "init_uart.h"
-#include "init.h"
-#include "init_PWM.h"
+#include <init.h>
+#include <deplacement.h>
 
 //#define TEST_UART
 #define PWM
@@ -53,22 +52,22 @@ int main(int argc, char** argv) {
 
 #ifdef PWM
 int i;
+int fin = 5;
 int main(int argc, char** argv) {
-    init();
-    init_PWM();
-    init_QEI();
-    T2CONbits.TON = 1; //démarrage timer
+    init_timer(3);
     T3CONbits.TON = 1;
-    //int varTest = 1;
     while(1){
         //permet au programme de rester dans cette boucle sans réinitialiser le timerµ
         
-        if (POS1CNT >= 90){
-            //varTest = 0;
-            POS1CNT = 0;
-            OC1RS = 7500;
-            OC3RS = 7500;
-        }
+         //if (POS1CNT >= 90){
+          // POS1CNT = 0; //POS1CNT est le compteur qui s'incrémente lorsque les fentes des roues passent devant les capteurs
+          // OC1RS = 7500;
+        // OC3RS = 7500; //Ces valeurs de OCRS ^permettent d'arrêter les roues
+      //  }
+        
+        if (IFS0bits.T3IF){
+            IFS0bits.T3IF =0;
+            regulation(fin);
     }
     return 0;
 }
