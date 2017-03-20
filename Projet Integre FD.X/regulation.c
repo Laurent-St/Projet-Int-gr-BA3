@@ -13,11 +13,11 @@ void regulation(int fin){
                     init_QEI();
                     T2CONbits.TON = 1; //démarrage timer et donc du moteur                    
                 } else if (conversion_capteur_pos(POS1CNT) >= pos_demarrage (TMR3)){
-                    OC3RS = 7500;
+                    OC3RS = 7500;       
                     OC1RS = 7500;
                 }
             }
             else if(0.25< TMR3 <= fin) {
-                //prout
+                //pr
             }       
         }
